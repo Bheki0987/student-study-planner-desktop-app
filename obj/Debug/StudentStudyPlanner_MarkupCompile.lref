@@ -1,6 +1,9 @@
 ﻿C:\Users\bpmog\source\repos\StudentStudyPlanner\StudentStudyPlanner\obj\Debug\GeneratedInternalTypeHelper.g.cs
-
-FC:\Users\bpmog\source\repos\StudentStudyPlanner\StudentStudyPlanner\CalendarPage.xaml;;
-FC:\Users\bpmog\source\repos\StudentStudyPlanner\StudentStudyPlanner\MainWindow.xaml;;
-FC:\Users\bpmog\source\repos\StudentStudyPlanner\StudentStudyPlanner\SchedulePage.xaml;;
+FC:\Users\bpmog\source\repos\StudentStudyPlanner\StudentStudyPlanner\Views\App.xaml;;
+FC:\Users\bpmog\source\repos\StudentStudyPlanner\StudentStudyPlanner\Views\AddTaskPage.xaml;;
+FC:\Users\bpmog\source\repos\StudentStudyPlanner\StudentStudyPlanner\Views\CalendarPage.xaml;;
+FC:\Users\bpmog\source\repos\StudentStudyPlanner\StudentStudyPlanner\Views\LoginWindow.xaml;;
+FC:\Users\bpmog\source\repos\StudentStudyPlanner\StudentStudyPlanner\Views\MainWindow.xaml;;
+FC:\Users\bpmog\source\repos\StudentStudyPlanner\StudentStudyPlanner\Views\ProgressTrackingPage.xaml;;
+FC:\Users\bpmog\source\repos\StudentStudyPlanner\StudentStudyPlanner\Views\SchedulePage.xaml;;
 

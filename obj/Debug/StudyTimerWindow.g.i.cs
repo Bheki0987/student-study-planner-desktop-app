@@ -35,12 +35,12 @@ namespace StudentStudyPlanner {
     
     
     /// <summary>
-    /// StudyTimerWindow
+    /// StudyTimerPage
     /// </summary>
-    public partial class StudyTimerWindow : System.Windows.Window, System.Windows.Markup.IComponentConnector {
+    public partial class StudyTimerPage : System.Windows.Controls.UserControl, System.Windows.Markup.IComponentConnector {
         
         
-        #line 41 "..\..\StudyTimerWindow.xaml"
+        #line 17 "..\..\StudyTimerWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBlock TimerDisplay;
         
@@ -48,7 +48,7 @@ namespace StudentStudyPlanner {
         #line hidden
         
         
-        #line 42 "..\..\StudyTimerWindow.xaml"
+        #line 18 "..\..\StudyTimerWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBlock StatusDisplay;
         
@@ -56,7 +56,7 @@ namespace StudentStudyPlanner {
         #line hidden
         
         
-        #line 46 "..\..\StudyTimerWindow.xaml"
+        #line 21 "..\..\StudyTimerWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button StartButton;
         
@@ -64,7 +64,7 @@ namespace StudentStudyPlanner {
         #line hidden
         
         
-        #line 47 "..\..\StudyTimerWindow.xaml"
+        #line 22 "..\..\StudyTimerWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button PauseButton;
         
@@ -72,7 +72,7 @@ namespace StudentStudyPlanner {
         #line hidden
         
         
-        #line 48 "..\..\StudyTimerWindow.xaml"
+        #line 23 "..\..\StudyTimerWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button ResetButton;
         
@@ -118,7 +118,7 @@ namespace StudentStudyPlanner {
             case 3:
             this.StartButton = ((System.Windows.Controls.Button)(target));
             
-            #line 46 "..\..\StudyTimerWindow.xaml"
+            #line 21 "..\..\StudyTimerWindow.xaml"
             this.StartButton.Click += new System.Windows.RoutedEventHandler(this.StartButton_Click);
             
             #line default
@@ -127,7 +127,7 @@ namespace StudentStudyPlanner {
             case 4:
             this.PauseButton = ((System.Windows.Controls.Button)(target));
             
-            #line 47 "..\..\StudyTimerWindow.xaml"
+            #line 22 "..\..\StudyTimerWindow.xaml"
             this.PauseButton.Click += new System.Windows.RoutedEventHandler(this.PauseButton_Click);
             
             #line default
@@ -136,7 +136,7 @@ namespace StudentStudyPlanner {
             case 5:
             this.ResetButton = ((System.Windows.Controls.Button)(target));
             
-            #line 48 "..\..\StudyTimerWindow.xaml"
+            #line 23 "..\..\StudyTimerWindow.xaml"
             this.ResetButton.Click += new System.Windows.RoutedEventHandler(this.ResetButton_Click);
             
             #line default

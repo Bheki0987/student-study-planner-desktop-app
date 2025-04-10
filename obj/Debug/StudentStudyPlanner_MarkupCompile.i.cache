@@ -9,12 +9,12 @@ StudentStudyPlanner
 none
 false
 DEBUG;TRACE
-C:\Users\bpmog\source\repos\StudentStudyPlanner\StudentStudyPlanner\App.xaml
-6-182144664
+C:\Users\bpmog\source\repos\StudentStudyPlanner\StudentStudyPlanner\Views\App.xaml
+81157453770
 
-17184254956
-19401177773
-AddTaskWindow.xaml;CalendarPage.xaml;MainWindow.xaml;NotesPage.xaml;SchedulePage.xaml;StudyTimerWindow.xaml;
+27-1960999660
+261041204085
+Views\AddTaskPage.xaml;Views\CalendarPage.xaml;Views\LoginWindow.xaml;Views\MainWindow.xaml;Views\NotesPage.xaml;Views\ProgressTrackingPage.xaml;Views\SchedulePage.xaml;Views\StudyTimerPage.xaml;
 
 False
 

@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="StudentStudyPlanner.SchedulePage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:StudentStudyPlanner">
+    <Grid Background="#F5F5F5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Schedule" FontSize="28" FontWeight="Bold" Margin="20" HorizontalAlignment="Center" Foreground="#333333"/>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="20,0,20,10">
+            <ComboBox x:Name="FilterComboBox" Width="150" Margin="0,0,10,0">
+                <ComboBoxItem Content="All Tasks"/>
+                <ComboBoxItem Content="Today's Tasks"/>
+                <ComboBoxItem Content="This Week's Tasks"/>
+                <ComboBoxItem Content="Completed Tasks"/>
+                <ComboBoxItem Content="Incomplete Tasks"/>
+            </ComboBox>
+            <ComboBox x:Name="SortComboBox" Width="150" Margin="0,0,10,0">
+                <ComboBoxItem Content="Date (Ascending)"/>
+                <ComboBoxItem Content="Date (Descending)"/>
+                <ComboBoxItem Content="Priority (High to Low)"/>
+                <ComboBoxItem Content="Priority (Low to High)"/>
+            </ComboBox>
+            <Button Content="Apply" Click="ApplyFiltersAndSort_Click" Width="100" Style="{StaticResource ModernButtonStyle}"/>
+        </StackPanel>
+
+        <ScrollViewer Grid.Row="2" Margin="20,0,20,20">
+            <ItemsControl x:Name="TasksItemsControl">
+                
+            </ItemsControl>
+        </ScrollViewer>
+
+        <Button Grid.Row="3" Content="+ ADD TASK" Width="130" Height="40" Margin="20" Click="AddTask_Click" Style="{StaticResource ModernButtonStyle}" Background="#4CAF50" HorizontalAlignment="Center"/>
+    </Grid>
+</UserControl>

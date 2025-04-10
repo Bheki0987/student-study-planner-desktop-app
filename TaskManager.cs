@@ -1,25 +1,41 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace StudentStudyPlanner
 {
     public static class TaskManager
     {
         private static List<Task> _tasks = new List<Task>();
-        private static List<Notification> _notifications = new List<Notification>();
+        private const string TasksFilePath = "tasks.xml";
+
+        static TaskManager()
+        {
+            LoadTasks();
+        }
 
         public static void AddTask(Task task)
         {
             _tasks.Add(task);
-            CreateNotificationForTask(task);
+            SaveTasks();
         }
 
         public static void RemoveTask(Task task)
         {
             _tasks.Remove(task);
-            // Remove associated notifications
-            _notifications.RemoveAll(n => n.Title == $"Reminder: {task.Name}");
+            SaveTasks();
+        }
+
+        public static void UpdateTask(Task oldTask, Task newTask)
+        {
+            int index = _tasks.IndexOf(oldTask);
+            if (index != -1)
+            {
+                _tasks[index] = newTask;
+                SaveTasks();
+            }
         }
 
         public static List<Task> GetAllTasks()
@@ -29,23 +45,38 @@ namespace StudentStudyPlanner
 
         public static List<Task> GetTasksForDate(DateTime date)
         {
-            return _tasks.Where(t => t.Date.Date == date.Date).ToList();
+            return _tasks.Where(t => t.Date.Date == date.Date && !t.IsCompleted).ToList();
         }
 
-        public static List<Notification> GetNotifications()
+        public static int GetTotalTaskCount()
         {
-            return _notifications.Where(n => !n.IsRead && n.NotificationTime <= DateTime.Now).ToList();
+            return _tasks.Count;
         }
 
-        private static void CreateNotificationForTask(Task task)
+        public static int GetCompletedTaskCount()
         {
-            DateTime notificationTime = task.Date.AddMinutes(-30); // Notify 30 minutes before task
-            Notification notification = new Notification(
-                $"Reminder: {task.Name}",
-                $"Your task '{task.Name}' is due soon.",
-                notificationTime
-            );
-            _notifications.Add(notification);
+            return _tasks.Count(t => t.IsCompleted);
+        }
+
+        private static void SaveTasks()
+        {
+            XmlSerializer serializer = new XmlSerializer(typeof(List<Task>));
+            using (StreamWriter writer = new StreamWriter(TasksFilePath))
+            {
+                serializer.Serialize(writer, _tasks);
+            }
+        }
+
+        private static void LoadTasks()
+        {
+            if (File.Exists(TasksFilePath))
+            {
+                XmlSerializer serializer = new XmlSerializer(typeof(List<Task>));
+                using (StreamReader reader = new StreamReader(TasksFilePath))
+                {
+                    _tasks = (List<Task>)serializer.Deserialize(reader);
+                }
+            }
         }
     }
 }

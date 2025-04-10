@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="StudentStudyPlanner.StudyTimerPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid Background="#F5F5F5">
+        <Border Background="White" CornerRadius="10" Margin="20">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="10" ShadowDepth="0" Opacity="0.1"/>
+            </Border.Effect>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Study Timer" FontSize="28" FontWeight="Bold" Margin="20" HorizontalAlignment="Center" Foreground="#333333"/>
+
+                <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,20">
+                    <StackPanel Margin="0,0,20,0">
+                        <TextBlock Text="Focus Time (minutes):" Margin="0,0,0,5"/>
+                        <TextBox x:Name="FocusTimeTextBox" Width="100" Text="25"/>
+                    </StackPanel>
+                    <StackPanel>
+                        <TextBlock Text="Break Time (minutes):" Margin="0,0,0,5"/>
+                        <TextBox x:Name="BreakTimeTextBox" Width="100" Text="5"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Grid.Row="2" VerticalAlignment="Center">
+                    <TextBlock x:Name="TimerDisplay" Text="25:00" FontSize="72" FontWeight="Light" HorizontalAlignment="Center" Foreground="#333333"/>
+                    <TextBlock x:Name="StatusDisplay" Text="Ready to start" FontSize="18" HorizontalAlignment="Center" Margin="0,10" Foreground="#757575"/>
+                </StackPanel>
+                <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" Margin="20">
+                    <Button x:Name="StartButton" Content="Start" Width="100" Style="{StaticResource ModernButtonStyle}" Click="StartButton_Click"/>
+                    <Button x:Name="PauseButton" Content="Pause" Width="100" Style="{StaticResource ModernButtonStyle}" Click="PauseButton_Click" IsEnabled="False" Background="#FFA000"/>
+                    <Button x:Name="ResetButton" Content="Reset" Width="100" Style="{StaticResource ModernButtonStyle}" Click="ResetButton_Click" Background="#F44336"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>
