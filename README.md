@@ -71,6 +71,9 @@ Use the navigation menu to access different features:
 4. Push to the branch
 5. Create a new Pull Request
 
-## License
+## Contact:
+- Email: [bpmogola](bpmogola@gmail.com)
+- LinkedIn: [Bheki Mogola](https://www.linkedin.com/in/bheki-mogola-8481122b7/)
 
-[MIT LICENCE]
+## License
+**MIT LICENCE**
